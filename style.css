@@ -1,19 +1,31 @@
 body {
     margin: 0;
+    color: rgb(25, 58, 47);
     font-family: Arial, Helvetica, sans-serif;
 }
 .nav {
-    font-size: 16px;
-    font-weight: bold;
     display: flex;
     justify-content: space-between;
-    background-color: transparent;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 20px;
 }
 .frase1{
     font-size: 16px;
+    padding: 0 20px;
+    margin: 0;
+    font-weight: bold;
 }
 .frase2{
-    font-size: 62px; /*54px em 425px 58px em 768px*/
+    font-size: 62px;
+    padding: 0 20px;
+    margin: 15px 0;
+    font-weight: bold;
+
 }
 .main {
     display: flex;
@@ -31,10 +43,7 @@ body {
     background-size: cover;
     background-position: center top;
 }
-p {
-    margin: 0;
-    margin: 15px;
-}
+
 button {
     margin-left: 20px;
     margin-bottom: 15px;
@@ -42,14 +51,25 @@ button {
     border: 0;
     border-radius: 5px;
     box-shadow: 0 0 1em rgb(25, 58, 47);
+    font-weight: bold;
+    color: rgb(25, 58, 47);
+    cursor: pointer;
 }
-.buttons {
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-around;
-}
-.main, .contact{
+
+.contact{
     background-color: rgb(83, 199, 160);
+}
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding:  0 20px;
+    font-size: 13px;
+    color:rgb(11, 26, 21);
+}
+footer a {
+    color:rgb(11, 26, 21);
 }
 
 @media (max-width: 424px) {
@@ -57,8 +77,47 @@ button {
         display: block;
     }
     .image{
-        height: 50vh;
+        height: auto;
     }
-    
+    .nav {
+        font-size: 12px;
+    }
+    .frase1{
+        font-size: 12px;
+    }
+    .frase2{
+        font-size: 50px;
+    }
+    button {
+        font-size: 10px;
+        margin: 10px;
+    }
+    .text {
+        margin: 70px 0 30px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .image {
+        height: 70vh;
+    }
 }
-
+@media (max-width: 768px) {
+    .nav {
+        font-size: 14px;
+    }
+    .frase1{
+        font-size: 13px;
+    }
+    .frase2{
+        font-size: 54px;
+    }
+    button {
+        font-size: 11px;
+        margin: 10px 0px 0px 20px;
+    }
+    footer {
+        font-size: 11px;
+    }
+}
